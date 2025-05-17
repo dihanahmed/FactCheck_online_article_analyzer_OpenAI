@@ -26,3 +26,6 @@ from langchain_openai import OpenAIEmbeddings
 
 from dotenv import load_dotenv
 load_dotenv()  # take environment variables from .env (especially openai api key)
+
+st.title("FactCheck 📈")
+st.sidebar.title("News Article URLs")
