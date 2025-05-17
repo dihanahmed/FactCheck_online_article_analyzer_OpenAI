@@ -65,3 +65,6 @@ if process_url_clicked:
     vectorstore_openai=FAISS.from_documents(docs, embeddings)
     main_placefolder.text("Embedding vector started building...👾")
     time.sleep(2)
+
+    # Save the faiss index into a pickle file
+    vectorstore_openai.save_local(file_path)
