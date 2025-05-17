@@ -37,3 +37,6 @@ for i in range(2):
     urls.append(url)
 
 process_url_clicked=st.sidebar.button("Process URLs")
+
+file_path="faiss_store_openai" # a folder for vector database
+
