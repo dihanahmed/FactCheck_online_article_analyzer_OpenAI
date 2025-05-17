@@ -72,3 +72,17 @@ if process_url_clicked:
 # section for questrion answering
 query=main_placefolder.text_input("Ask your question...🤔")
 
+# Load the FAISS index from the pickle file
+if query:
+    if os.path.exists(file_path):
+        embeddings = OpenAIEmbeddings()
+        vectorstore = FAISS.load_local(
+            file_path,
+            embeddings,
+            allow_dangerous_deserialization=True
+        )
+        chain=RetrievalQAWithSourcesChain.from_llm(llm=llm, retriever=vectorstore.as_retriever())
+        result=chain({"question": query}, return_only_outputs=True)
+        st.header("Answer:")
+        st.write(result['answer'])
+
