@@ -23,3 +23,6 @@ from langchain_community.vectorstores import FAISS
 from langchain_openai import OpenAI
 
 from langchain_openai import OpenAIEmbeddings
+
+from dotenv import load_dotenv
+load_dotenv()  # take environment variables from .env (especially openai api key)
