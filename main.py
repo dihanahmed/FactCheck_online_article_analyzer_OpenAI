@@ -68,3 +68,7 @@ if process_url_clicked:
 
     # Save the faiss index into a pickle file
     vectorstore_openai.save_local(file_path)
+
+# section for questrion answering
+query=main_placefolder.text_input("Ask your question...🤔")
+
