@@ -35,3 +35,5 @@ urls=[]
 for i in range(2):
     url=st.sidebar.text_input(f"URL {i+1}")
     urls.append(url)
+
+process_url_clicked=st.sidebar.button("Process URLs")
