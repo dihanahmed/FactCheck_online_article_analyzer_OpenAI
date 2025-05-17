@@ -52,10 +52,16 @@ if process_url_clicked:
     main_placefolder.text("Loading the data...⏱️")
     data=loader.load()
 
-# Splitting the data into chunks
+    # Splitting the data into chunks
     text_splitter = RecursiveCharacterTextSplitter(
         separators=['\n\n', '\n', '.', ','],
         chunk_size=1000
     )
     main_placefolder.text("Splitting the data into chunks...🖖")
     docs=text_splitter.split_documents(data)
+
+    # create embeddings and save it to FAISS index
+    embeddings = OpenAIEmbeddings()
+    vectorstore_openai=FAISS.from_documents(docs, embeddings)
+    main_placefolder.text("Embedding vector started building...👾")
+    time.sleep(2)
