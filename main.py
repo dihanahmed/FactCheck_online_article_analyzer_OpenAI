@@ -40,3 +40,7 @@ process_url_clicked=st.sidebar.button("Process URLs")
 
 file_path="faiss_store_openai" # a folder for vector database
 
+#configure the embeddings
+main_placefolder=st.empty()
+llm=OpenAI(
+    temperature=0,max_tokens=500)
