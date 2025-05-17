@@ -29,3 +29,9 @@ load_dotenv()  # take environment variables from .env (especially openai api key
 
 st.title("FactCheck 📈")
 st.sidebar.title("News Article URLs")
+
+# defile the no of urls
+urls=[]
+for i in range(2):
+    url=st.sidebar.text_input(f"URL {i+1}")
+    urls.append(url)
