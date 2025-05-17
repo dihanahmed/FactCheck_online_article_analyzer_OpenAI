@@ -52,3 +52,10 @@ if process_url_clicked:
     main_placefolder.text("Loading the data...⏱️")
     data=loader.load()
 
+# Splitting the data into chunks
+    text_splitter = RecursiveCharacterTextSplitter(
+        separators=['\n\n', '\n', '.', ','],
+        chunk_size=1000
+    )
+    main_placefolder.text("Splitting the data into chunks...🖖")
+    docs=text_splitter.split_documents(data)
