@@ -44,3 +44,11 @@ file_path="faiss_store_openai" # a folder for vector database
 main_placefolder=st.empty()
 llm=OpenAI(
     temperature=0,max_tokens=500)
+
+if process_url_clicked:
+
+    # Loading the data (url)
+    loader=UnstructuredURLLoader(urls=urls)
+    main_placefolder.text("Loading the data...⏱️")
+    data=loader.load()
+
