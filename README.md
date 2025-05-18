@@ -1,5 +1,3 @@
-# AT3_group_24
-
 # 📰 FactCheck – News Research Tool
 
 FactCheck is an AI-powered application that helps users extract reliable, source-grounded answers from any news article or publicly available web page. Built with LangChain, OpenAI APIs, FAISS, and Streamlit, this project demonstrates a complete Retrieval-Augmented Generation (RAG) pipeline for document-based question answering.
